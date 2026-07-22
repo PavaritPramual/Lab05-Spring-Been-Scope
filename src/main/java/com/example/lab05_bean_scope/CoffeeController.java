@@ -22,6 +22,15 @@ public class CoffeeController {
     public List<Coffee> getAllCoffees() {
         return coffees;
     }
+    @GetMapping("/{id}")
+    public Coffee getCoffeeById(@PathVariable String id) {
+        for (Coffee coffee : coffees) {
+            if (coffee.getId().equals(id)) {
+                return coffee;
+            }
+        }
+        return null;
+    }
 
     // [POST] 
     @PostMapping
