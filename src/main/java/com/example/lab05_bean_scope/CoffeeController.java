@@ -30,4 +30,27 @@ public class CoffeeController {
         coffees.add(coffee);
         return coffee;
     }
+    // [PUT] ตาม ID
+    @PutMapping("/{id}")
+    public Coffee updateCoffee(@PathVariable String id, @RequestBody Coffee updatedCoffee) {
+        for (int i = 0; i < coffees.size(); i++) {
+            if (coffees.get(i).getId().equals(id)) {
+                updatedCoffee.setId(id);
+                coffees.set(i, updatedCoffee);
+                return updatedCoffee;
+            }
+        }
+        return null;
+    }
+
+    // [DELETE] ตาม ID
+    @DeleteMapping("/{id}")
+    public String deleteCoffee(@PathVariable String id) {
+        boolean removed = coffees.removeIf(coffee -> coffee.getId().equals(id));
+        if (removed) {
+            return "Deleted coffee with ID: " + id;
+        } else {
+            return "Coffee not found!";
+        }
+    }
 }
