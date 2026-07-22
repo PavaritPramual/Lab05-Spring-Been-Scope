@@ -3,7 +3,7 @@
 
 > **Course:** CP353002 — Principles of Software Design and Development  
 > **Repository:** [Lab05-Spring-Been-Scope](https://github.com/PavaritPramual/Lab05-Spring-Been-Scope)  
-> **Team Members:** บอส (Boss) & โฟน (Phone)  
+> **Team Members:** นายปวริศช์ ประมวล 673380278-9sec1 & นายธีรเมธ สายคำ 673380273-9sec2
 
 
 
